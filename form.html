@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' type='text/css' href='css/form.css'>
+		<link rel='stylesheet' type='text/css' href='css/font-awesome.min.css'>
+<!--		<link rel='stylesheet' type='text/css' href='css/preloader.css'>-->
+		<link rel="stylesheet" type='text/css' href="bootstrap/css/bootstrap.css" >
+	</head>
+	<body>
+        <div style="opacity:1; -webkit-transition:0.5s ease;" id='page_preloader' class='preloader'>
+            <div class='loader'></div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 containers'>
+			<img src='img/men.png'>
+			<form>
+				<div>
+					<h3 style="color:red;" id="sss"></h3>
+					<h3 style="color:red;" id="ppp"></h3>
+				</div>
+				<div class='dws-input'>
+					<input type='text' name='text' class='inp' oninput="validate(this.value)" placeholder='Your name...'>
+				</div>
+				<div class='dws-input'>
+					<input type='password' name='password'class='pas' oninput='validas(this.value)' placeholder='Your password...'>
+				</div>
+				<input type='submit' class='dws-submit' name='submit' value='Sing up'>
+				<br>
+				<a href='#'>Restore password</a>
+			</form>
+			<div class='social'>
+				<i class="fa fa-vk" aria-hidden="true"></i>
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				<i class="fa fa-google-plus" aria-hidden="true"></i>
+				<i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+			</div>
+		</div>
+        </div>
+        <div class="col-lg-4"></div>
+            </div>
+        </div>
+        
+		<script>
+			
+			function validate(e){
+				if(e.lenght <= 10){
+				sss.innerHTML = "";
+			}else{
+				sss.innerHTML = "";
+			}if(e.length > 10){
+				sss.innerHTML = "Error max length 10";
+				sss.style.color = "#FF351E";
+			}
+				
+			}
+			
+			function validas(e){
+				if(e.lenght < 8){
+				ppp.innerHTML = "";
+			}else{
+				ppp.innerHTML = "";
+			}if(e.length < 10){
+				ppp.innerHTML = "Min lenght 8";
+				ppp.style.color = "#FF351E";
+			}
+				
+			}
+			
+			
+		</script>
+		<script src='js/preloader.js'></script>
+	</body>
+</html>
